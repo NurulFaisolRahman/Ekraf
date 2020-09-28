@@ -9,6 +9,15 @@ class Ekraf extends CI_Controller {
     $Data['Kecamatan'] = $this->db->query("SELECT * FROM `KodeWilayah` WHERE Kode LIKE '11.01.%' AND length(Kode) = 8")->result_array();
     $Data['Desa'] = $this->db->query("SELECT * FROM `KodeWilayah` WHERE Kode LIKE '11.01.01.%'")->result_array();
 		$this->load->view('Survei',$Data);
+  }
+  
+  public function Survei(){
+    $this->db->insert('Survei',$_POST);
+    if ($this->db->affected_rows()){
+			echo '1';
+    } else {
+      echo 'Data Survei Gagal Tersimpan!';
+    }
 	}
 
 	function Kabupaten(){

@@ -53,7 +53,7 @@
                             <div class="input-group-prepend">
                               <label class="input-group-text bg-primary text-dark"><b>Pendidikan</b></label>
                             </div>
-                            <select class="custom-select" id="JenisUsahaKreatif">  
+                            <select class="custom-select" id="Pendidikan">  
                               <option value="1">SD</option>
                               <option value="2">SMP</option>
                               <option value="3">SMA</option>
@@ -658,9 +658,9 @@
 																	<th class="align-middle text-center" colspan="2">Penerimaan</th>
 																</tr>
 																<tr>
-																	<th class="align-middle text-center" >Kapasitas Produksi</th>
+																	<th class="align-middle text-center">Kapasitas Produksi</th>
 																	<th class="align-middle text-center">Satuan (Kg/Lainnya)</th>
-																	<th class="align-middle text-center" >Rentang Produksi</th>
+																	<th class="align-middle text-center">Rentang Produksi</th>
 																	<th class="align-middle text-center">Harga Jual (Rp)</th>
 																	<th class="align-middle text-center">Omzet (Rp)</th>
 																</tr>
@@ -773,7 +773,7 @@
 																											<option value="Bulanan">Bulanan</option>
 																											<option value="Tahunan">Tahunan</option>
 																										</select>
-																									</td>
+																									</td> 
 																									<td class="align-middle text-center"><input class="form-control" type="text" id="SatuanInputBahanBaku1Produk12019"></td>
 																									<td class="align-middle text-center"><input class="form-control" type="text" id="SatuanPembelianBahanBaku1Produk12019"></td>
 																									<td class="align-middle text-center"><input class="form-control" type="text" id="HargaBeliBahanBaku1Produk12019" placeholder="0"></td>
@@ -1155,10 +1155,12 @@
 															<thead>
 																<tr>
 																	<th class="align-middle text-center" rowspan="2">Jenis Pengeluaran</th>
-																	<th class="align-middle text-center" rowspan="2">Rentang Waktu</th>
+																	<th class="align-middle text-center" colspan="2">Rentang Waktu</th>
 																	<th class="align-middle text-center" colspan="2">Nilai (Rp)</th>
 																</tr>
 																<tr>
+																	<th class="align-middle text-center" >Tahun 2018</th>
+																	<th class="align-middle text-center">Tahun 2019</th>
 																	<th class="align-middle text-center" >Tahun 2018</th>
 																	<th class="align-middle text-center">Tahun 2019</th>
 																</tr>
@@ -1166,6 +1168,14 @@
 															<tbody>
 																<tr>
 																	<th class="align-middle text-center">Upah Gaji (Termasuk lembur, bonus, tunjangan, asuransi dll)</th>
+																	<td class="align-middle text-center">
+																		<select class="custom-select" id="RentangGaji2018">  
+																			<option value="Harian">Harian</option>
+																			<option value="Mingguan">Mingguan</option>
+																			<option value="Bulanan">Bulanan</option>
+																			<option value="Tahunan">Tahunan</option>
+																		</select>
+																	</td>
 																	<td class="align-middle text-center">
 																		<select class="custom-select" id="RentangGaji2019">  
 																			<option value="Harian">Harian</option>
@@ -1180,6 +1190,14 @@
 																<tr>
 																	<th class="align-middle text-center">Surplus Usaha bruto</th>
 																	<td class="align-middle text-center">
+																		<select class="custom-select" id="RentangSurplus2018">  
+																			<option value="Harian">Harian</option>
+																			<option value="Mingguan">Mingguan</option>
+																			<option value="Bulanan">Bulanan</option>
+																			<option value="Tahunan">Tahunan</option>
+																		</select>
+																	</td>
+																	<td class="align-middle text-center">
 																		<select class="custom-select" id="RentangSurplus2019">  
 																			<option value="Harian">Harian</option>
 																			<option value="Mingguan">Mingguan</option>
@@ -1193,6 +1211,14 @@
 																<tr>
 																	<th class="align-middle text-center">Sewa (Gedung / tanah)</th>
 																	<td class="align-middle text-center">
+																		<select class="custom-select" id="RentangSewa2018">  
+																			<option value="Harian">Harian</option>
+																			<option value="Mingguan">Mingguan</option>
+																			<option value="Bulanan">Bulanan</option>
+																			<option value="Tahunan">Tahunan</option>
+																		</select>
+																	</td>
+																	<td class="align-middle text-center">
 																		<select class="custom-select" id="RentangSewa2019">  
 																			<option value="Harian">Harian</option>
 																			<option value="Mingguan">Mingguan</option>
@@ -1205,6 +1231,14 @@
 																</tr>
 																<tr>
 																	<th class="align-middle text-center">Bunga Atas pinjaman</th>
+																	<td class="align-middle text-center">
+																		<select class="custom-select" id="RentangBunga2018">  
+																			<option value="Harian">Harian</option>
+																			<option value="Mingguan">Mingguan</option>
+																			<option value="Bulanan">Bulanan</option>
+																			<option value="Tahunan">Tahunan</option>
+																		</select>
+																	</td>
 																	<td class="align-middle text-center">
 																		<select class="custom-select" id="RentangBunga2019">  
 																			<option value="Harian">Harian</option>
@@ -1248,11 +1282,11 @@
 																<tr>
 																	<th class="align-middle text-center">Laki-Laki</th>
 																	<td class="align-middle text-center"><input class="form-control" type="text" id="Pria2018" placeholder="0"></td>
-																	<td class="align-middle text-center"><input class="form-control" type="text" id="Perempuan2019" placeholder="0"></td>
+																	<td class="align-middle text-center"><input class="form-control" type="text" id="Perempuan2018" placeholder="0"></td>
 																</tr>
 																<tr>
 																	<th class="align-middle text-center">Perempuan</th>
-																	<td class="align-middle text-center"><input class="form-control" type="text" id="Pria2018" placeholder="0"></td>
+																	<td class="align-middle text-center"><input class="form-control" type="text" id="Pria2019" placeholder="0"></td>
 																	<td class="align-middle text-center"><input class="form-control" type="text" id="Perempuan2019" placeholder="0"></td>
 																</tr>
 															</tbody>
@@ -1435,7 +1469,7 @@
 															<option value="8">Media Luar</option>
 															<option value="9">Lainnya</option>                      
 														</select>
-														<input class="form-control" type="text" id="MediaPromosiLainnya">    
+														<input class="form-control" type="text" id="MediaPromosiLainnya" disabled>    
 													</div>
 												</div> 
 												<div class="col-sm-6 my-1">
@@ -1473,13 +1507,14 @@
 															<option value="5">Perseorangan</option>
 															<option value="6">Lainnya </option>
 														</select>
-														<input class="form-control" type="text" id="BadanHukumLainnya">      
+														<input class="form-control" type="text" id="BadanHukumLainnya" disabled>      
 													</div>
 												</div> 
 											</div>
 										</div>
 									</div>
 								</div>
+								<button type="button" class="btn btn-danger" id="Kirim"><b>Kirim Survei</b></button>
 							</div>
             </div>
           </div>
@@ -1494,6 +1529,152 @@
       $(document).ready(function(){
         
         var BaseURL = '<?=base_url()?>'
+
+				$("#Kirim").click(function() {
+					var d = new Date();
+      		var Tanggal = String(("0" + d.getDate()).slice(-2)+'-'+(("0" + (d.getMonth() + 1)).slice(-2))+'-'+d.getFullYear()+' '+d.getHours()+'-'+d.getMinutes()+'-'+d.getSeconds());
+          var DampakCovid = $("#PersentaseDampakCovid").val()
+					if ($("#DampakCovid").val() == 3) {
+						DampakCovid = 0
+					} 
+					var MediaPromosi = $("#MediaPromosi").val()
+					if (MediaPromosi == 9) {
+						MediaPromosi = $("#MediaPromosiLainnya").val()
+					} 
+					var BadanHukum = $("#JenisBadanHukum").val()
+					if (BadanHukum == 6) {
+						BadanHukum = $("#BadanHukumLainnya").val()
+					} 
+					var Survei = 	{ TanggalSurvei: Tanggal,
+													// KodeSurveyor: $("#Nama").val(), 
+													// KodeResponden: $("#Nama").val(), 
+													// KodeKBLI: $("#Nama").val(), 
+													NamaResponden: $("#NamaResponden").val(), 
+													Gender: $("#Gender").val(), 
+													Pendidikan: $("#Pendidikan").val(), 
+													Provinsi: $("#Provinsi").val(), 
+													Kabupaten: $("#Kabupaten").val(), 
+													Kecamatan: $("#Kecamatan").val(), 
+													Desa: $("#Desa").val(),
+													JenisUsaha: $("#JenisUsahaKreatif").val(), 
+													LamaUsaha: $("#LamaUsaha").val(), 
+													Produk2018: $("#Produk12018").val()+'|'+$("#Produk22018").val()+'|'+$("#Produk32018").val()+'|'+$("#Produk42018").val(), 
+													Produk2019: $("#Produk12019").val()+'|'+$("#Produk22019").val()+'|'+$("#Produk32019").val()+'|'+$("#Produk42019").val(), 
+													KapasitasProduksi2018: $("#KapasitasProduk12018").val()+'|'+$("#KapasitasProduk22018").val()+'|'+$("#KapasitasProduk32018").val()+'|'+$("#KapasitasProduk42018").val(), 
+													KapasitasProduksi2019: $("#KapasitasProduk12019").val()+'|'+$("#KapasitasProduk22019").val()+'|'+$("#KapasitasProduk32019").val()+'|'+$("#KapasitasProduk42019").val(), 
+													SatuanProduksi2018: $("#SatuanProduk12018").val()+'|'+$("#SatuanProduk22018").val()+'|'+$("#SatuanProduk32018").val()+'|'+$("#SatuanProduk42018").val(), 
+													SatuanProduksi2019: $("#SatuanProduk12019").val()+'|'+$("#SatuanProduk22019").val()+'|'+$("#SatuanProduk32019").val()+'|'+$("#SatuanProduk42019").val(), 
+													RentangProduksi2018: $("#RentangProduk12018").val()+'|'+$("#RentangProduk22018").val()+'|'+$("#RentangProduk32018").val()+'|'+$("#RentangProduk42018").val(), 
+													RentangProduksi2019: $("#RentangProduk12019").val()+'|'+$("#RentangProduk22019").val()+'|'+$("#RentangProduk32019").val()+'|'+$("#RentangProduk42019").val(),  
+													HargaJualProduksi2018: $("#HargaJualProduk12018").val()+'|'+$("#HargaJualProduk22018").val()+'|'+$("#HargaJualProduk32018").val()+'|'+$("#HargaJualProduk42018").val(), 
+													HargaJualProduksi2019: $("#HargaJualProduk12019").val()+'|'+$("#HargaJualProduk22019").val()+'|'+$("#HargaJualProduk32019").val()+'|'+$("#HargaJualProduk42019").val(), 
+													OmzetProduksi2018: $("#OmzetProduk12018").val()+'|'+$("#OmzetProduk22018").val()+'|'+$("#OmzetProduk32018").val()+'|'+$("#OmzetProduk42018").val(),
+													OmzetProduksi2019: $("#OmzetProduk12019").val()+'|'+$("#OmzetProduk22019").val()+'|'+$("#OmzetProduk32019").val()+'|'+$("#OmzetProduk42019").val(), 
+													BahanBakuProduk2018: $("#BahanBaku1Produk12018").val()+'|'+$("#BahanBaku2Produk12018").val()+'|'+$("#BahanBaku3Produk12018").val()+'|'+$("#BahanBaku4Produk12018").val()
+																					+'$'+$("#BahanBaku1Produk22018").val()+'|'+$("#BahanBaku2Produk22018").val()+'|'+$("#BahanBaku3Produk22018").val()+'|'+$("#BahanBaku4Produk22018").val()
+																					+'$'+$("#BahanBaku1Produk32018").val()+'|'+$("#BahanBaku2Produk32018").val()+'|'+$("#BahanBaku3Produk32018").val()+'|'+$("#BahanBaku4Produk32018").val()
+																					+'$'+$("#BahanBaku1Produk42018").val()+'|'+$("#BahanBaku2Produk42018").val()+'|'+$("#BahanBaku3Produk42018").val()+'|'+$("#BahanBaku4Produk42018").val(), 
+													BahanBakuProduk2019: $("#BahanBaku1Produk12019").val()+'|'+$("#BahanBaku2Produk12019").val()+'|'+$("#BahanBaku3Produk12019").val()+'|'+$("#BahanBaku4Produk12019").val()
+																					+'$'+$("#BahanBaku1Produk22019").val()+'|'+$("#BahanBaku2Produk22019").val()+'|'+$("#BahanBaku3Produk22019").val()+'|'+$("#BahanBaku4Produk22019").val()
+																					+'$'+$("#BahanBaku1Produk32019").val()+'|'+$("#BahanBaku2Produk32019").val()+'|'+$("#BahanBaku3Produk32019").val()+'|'+$("#BahanBaku4Produk32019").val()
+																					+'$'+$("#BahanBaku1Produk42019").val()+'|'+$("#BahanBaku2Produk42019").val()+'|'+$("#BahanBaku3Produk42019").val()+'|'+$("#BahanBaku4Produk42019").val(), 
+													KapasitasInput2018: $("#KapasitasInputBahanBaku1Produk12018").val()+'|'+$("#KapasitasInputBahanBaku2Produk12018").val()+'|'+$("#KapasitasInputBahanBaku3Produk12018").val()+'|'+$("#KapasitasInputBahanBaku4Produk12018").val()
+																				 +'$'+$("#KapasitasInputBahanBaku1Produk22018").val()+'|'+$("#KapasitasInputBahanBaku2Produk22018").val()+'|'+$("#KapasitasInputBahanBaku3Produk22018").val()+'|'+$("#KapasitasInputBahanBaku4Produk22018").val()
+																				 +'$'+$("#KapasitasInputBahanBaku1Produk32018").val()+'|'+$("#KapasitasInputBahanBaku2Produk32018").val()+'|'+$("#KapasitasInputBahanBaku3Produk32018").val()+'|'+$("#KapasitasInputBahanBaku4Produk32018").val()
+																				 +'$'+$("#KapasitasInputBahanBaku1Produk42018").val()+'|'+$("#KapasitasInputBahanBaku2Produk42018").val()+'|'+$("#KapasitasInputBahanBaku3Produk42018").val()+'|'+$("#KapasitasInputBahanBaku4Produk42018").val(), 
+													KapasitasInput2019: $("#KapasitasInputBahanBaku1Produk12019").val()+'|'+$("#KapasitasInputBahanBaku2Produk12019").val()+'|'+$("#KapasitasInputBahanBaku3Produk12019").val()+'|'+$("#KapasitasInputBahanBaku4Produk12019").val()
+																				 +'$'+$("#KapasitasInputBahanBaku1Produk22019").val()+'|'+$("#KapasitasInputBahanBaku2Produk22019").val()+'|'+$("#KapasitasInputBahanBaku3Produk22019").val()+'|'+$("#KapasitasInputBahanBaku4Produk22019").val()
+																				 +'$'+$("#KapasitasInputBahanBaku1Produk32019").val()+'|'+$("#KapasitasInputBahanBaku2Produk32019").val()+'|'+$("#KapasitasInputBahanBaku3Produk32019").val()+'|'+$("#KapasitasInputBahanBaku4Produk32019").val()
+																				 +'$'+$("#KapasitasInputBahanBaku1Produk42019").val()+'|'+$("#KapasitasInputBahanBaku2Produk42019").val()+'|'+$("#KapasitasInputBahanBaku3Produk42019").val()+'|'+$("#KapasitasInputBahanBaku4Produk42019").val(), 
+													RentangInput2018: $("#RentangInputBahanBaku1Produk12018").val()+'|'+$("#RentangInputBahanBaku2Produk12018").val()+'|'+$("#RentangInputBahanBaku3Produk12018").val()+'|'+$("#RentangInputBahanBaku4Produk12018").val()
+																			 +'$'+$("#RentangInputBahanBaku1Produk22018").val()+'|'+$("#RentangInputBahanBaku2Produk22018").val()+'|'+$("#RentangInputBahanBaku3Produk22018").val()+'|'+$("#RentangInputBahanBaku4Produk22018").val()
+																			 +'$'+$("#RentangInputBahanBaku1Produk32018").val()+'|'+$("#RentangInputBahanBaku2Produk32018").val()+'|'+$("#RentangInputBahanBaku3Produk32018").val()+'|'+$("#RentangInputBahanBaku4Produk32018").val()
+																			 +'$'+$("#RentangInputBahanBaku1Produk42018").val()+'|'+$("#RentangInputBahanBaku2Produk42018").val()+'|'+$("#RentangInputBahanBaku3Produk42018").val()+'|'+$("#RentangInputBahanBaku4Produk42018").val(),  
+													RentangInput2019: $("#RentangInputBahanBaku1Produk12019").val()+'|'+$("#RentangInputBahanBaku2Produk12019").val()+'|'+$("#RentangInputBahanBaku3Produk12019").val()+'|'+$("#RentangInputBahanBaku4Produk12019").val()
+																			 +'$'+$("#RentangInputBahanBaku1Produk22019").val()+'|'+$("#RentangInputBahanBaku2Produk22019").val()+'|'+$("#RentangInputBahanBaku3Produk22019").val()+'|'+$("#RentangInputBahanBaku4Produk22019").val()
+																			 +'$'+$("#RentangInputBahanBaku1Produk32019").val()+'|'+$("#RentangInputBahanBaku2Produk32019").val()+'|'+$("#RentangInputBahanBaku3Produk32019").val()+'|'+$("#RentangInputBahanBaku4Produk32019").val()
+																			 +'$'+$("#RentangInputBahanBaku1Produk42019").val()+'|'+$("#RentangInputBahanBaku2Produk42019").val()+'|'+$("#RentangInputBahanBaku3Produk42019").val()+'|'+$("#RentangInputBahanBaku4Produk42019").val(),  
+													SatuanInput2018: $("#SatuanInputBahanBaku1Produk12018").val()+'|'+$("#SatuanInputBahanBaku2Produk12018").val()+'|'+$("#SatuanInputBahanBaku3Produk12018").val()+'|'+$("#SatuanInputBahanBaku4Produk12018").val()
+																			+'$'+$("#SatuanInputBahanBaku1Produk22018").val()+'|'+$("#SatuanInputBahanBaku2Produk22018").val()+'|'+$("#SatuanInputBahanBaku3Produk22018").val()+'|'+$("#SatuanInputBahanBaku4Produk22018").val()
+																			+'$'+$("#SatuanInputBahanBaku1Produk32018").val()+'|'+$("#SatuanInputBahanBaku2Produk32018").val()+'|'+$("#SatuanInputBahanBaku3Produk32018").val()+'|'+$("#SatuanInputBahanBaku4Produk32018").val()
+																			+'$'+$("#SatuanInputBahanBaku1Produk42018").val()+'|'+$("#SatuanInputBahanBaku2Produk42018").val()+'|'+$("#SatuanInputBahanBaku3Produk42018").val()+'|'+$("#SatuanInputBahanBaku4Produk42018").val(),
+													SatuanInput2019: $("#SatuanInputBahanBaku1Produk12019").val()+'|'+$("#SatuanInputBahanBaku2Produk12019").val()+'|'+$("#SatuanInputBahanBaku3Produk12019").val()+'|'+$("#SatuanInputBahanBaku4Produk12019").val()
+																			+'$'+$("#SatuanInputBahanBaku1Produk22019").val()+'|'+$("#SatuanInputBahanBaku2Produk22019").val()+'|'+$("#SatuanInputBahanBaku3Produk22019").val()+'|'+$("#SatuanInputBahanBaku4Produk22019").val()
+																			+'$'+$("#SatuanInputBahanBaku1Produk32019").val()+'|'+$("#SatuanInputBahanBaku2Produk32019").val()+'|'+$("#SatuanInputBahanBaku3Produk32019").val()+'|'+$("#SatuanInputBahanBaku4Produk32019").val()
+																			+'$'+$("#SatuanInputBahanBaku1Produk42019").val()+'|'+$("#SatuanInputBahanBaku2Produk42019").val()+'|'+$("#SatuanInputBahanBaku3Produk42019").val()+'|'+$("#SatuanInputBahanBaku4Produk42019").val(), 
+													SatuanPembelian2018: $("#SatuanPembelianBahanBaku1Produk12018").val()+'|'+$("#SatuanPembelianBahanBaku2Produk12018").val()+'|'+$("#SatuanPembelianBahanBaku3Produk12018").val()+'|'+$("#SatuanPembelianBahanBaku4Produk12018").val()
+																					+'$'+$("#SatuanPembelianBahanBaku1Produk22018").val()+'|'+$("#SatuanPembelianBahanBaku2Produk22018").val()+'|'+$("#SatuanPembelianBahanBaku3Produk22018").val()+'|'+$("#SatuanPembelianBahanBaku4Produk22018").val()
+																					+'$'+$("#SatuanPembelianBahanBaku1Produk32018").val()+'|'+$("#SatuanPembelianBahanBaku2Produk32018").val()+'|'+$("#SatuanPembelianBahanBaku3Produk32018").val()+'|'+$("#SatuanPembelianBahanBaku4Produk32018").val()
+																					+'$'+$("#SatuanPembelianBahanBaku1Produk42018").val()+'|'+$("#SatuanPembelianBahanBaku2Produk42018").val()+'|'+$("#SatuanPembelianBahanBaku3Produk42018").val()+'|'+$("#SatuanPembelianBahanBaku4Produk42018").val(),
+													SatuanPembelian2019: $("#SatuanPembelianBahanBaku1Produk12019").val()+'|'+$("#SatuanPembelianBahanBaku2Produk12019").val()+'|'+$("#SatuanPembelianBahanBaku3Produk12019").val()+'|'+$("#SatuanPembelianBahanBaku4Produk12019").val()
+																					+'$'+$("#SatuanPembelianBahanBaku1Produk22019").val()+'|'+$("#SatuanPembelianBahanBaku2Produk22019").val()+'|'+$("#SatuanPembelianBahanBaku3Produk22019").val()+'|'+$("#SatuanPembelianBahanBaku4Produk22019").val()
+																					+'$'+$("#SatuanPembelianBahanBaku1Produk32019").val()+'|'+$("#SatuanPembelianBahanBaku2Produk32019").val()+'|'+$("#SatuanPembelianBahanBaku3Produk32019").val()+'|'+$("#SatuanPembelianBahanBaku4Produk32019").val()
+																					+'$'+$("#SatuanPembelianBahanBaku1Produk42019").val()+'|'+$("#SatuanPembelianBahanBaku2Produk42019").val()+'|'+$("#SatuanPembelianBahanBaku3Produk42019").val()+'|'+$("#SatuanPembelianBahanBaku4Produk42019").val(), 
+													HargaBeli2018: $("#HargaBeliBahanBaku1Produk12018").val()+'|'+$("#HargaBeliBahanBaku1Produk12018").val()+'|'+$("#HargaBeliBahanBaku1Produk12018").val()+'|'+$("#HargaBeliBahanBaku1Produk12018").val()
+																		+'$'+$("#HargaBeliBahanBaku1Produk22018").val()+'|'+$("#HargaBeliBahanBaku1Produk22018").val()+'|'+$("#HargaBeliBahanBaku1Produk22018").val()+'|'+$("#HargaBeliBahanBaku1Produk22018").val()
+																		+'$'+$("#HargaBeliBahanBaku1Produk32018").val()+'|'+$("#HargaBeliBahanBaku1Produk32018").val()+'|'+$("#HargaBeliBahanBaku1Produk32018").val()+'|'+$("#HargaBeliBahanBaku1Produk32018").val()
+																		+'$'+$("#HargaBeliBahanBaku1Produk42018").val()+'|'+$("#HargaBeliBahanBaku1Produk42018").val()+'|'+$("#HargaBeliBahanBaku1Produk42018").val()+'|'+$("#HargaBeliBahanBaku1Produk42018").val(),
+													HargaBeli2019: $("#HargaBeliBahanBaku1Produk12019").val()+'|'+$("#HargaBeliBahanBaku1Produk12019").val()+'|'+$("#HargaBeliBahanBaku1Produk12019").val()+'|'+$("#HargaBeliBahanBaku1Produk12019").val()
+																		+'$'+$("#HargaBeliBahanBaku1Produk22019").val()+'|'+$("#HargaBeliBahanBaku1Produk22019").val()+'|'+$("#HargaBeliBahanBaku1Produk22019").val()+'|'+$("#HargaBeliBahanBaku1Produk22019").val()
+																		+'$'+$("#HargaBeliBahanBaku1Produk32019").val()+'|'+$("#HargaBeliBahanBaku1Produk32019").val()+'|'+$("#HargaBeliBahanBaku1Produk32019").val()+'|'+$("#HargaBeliBahanBaku1Produk32019").val()
+																		+'$'+$("#HargaBeliBahanBaku1Produk42019").val()+'|'+$("#HargaBeliBahanBaku1Produk42019").val()+'|'+$("#HargaBeliBahanBaku1Produk42019").val()+'|'+$("#HargaBeliBahanBaku1Produk42019").val(), 
+													RentangInputPrimer2018: $("#RentangGaji2018").val()+'|'+$("#RentangSurplus2018").val()+'|'+$("#RentangSewa2018").val()+'|'+$("#RentangBunga2018").val(), 
+													RentangInputPrimer2019: $("#RentangGaji2019").val()+'|'+$("#RentangSurplus2019").val()+'|'+$("#RentangSewa2019").val()+'|'+$("#RentangBunga2019").val(),
+													NIlaiInputPrimer2018: $("#Gaji2018").val()+'|'+$("#Surplus2018").val()+'|'+$("#Sewa2018").val()+'|'+$("#Bunga2018").val(),  
+													NIlaiInputPrimer2019: $("#Gaji2019").val()+'|'+$("#Surplus2019").val()+'|'+$("#Sewa2019").val()+'|'+$("#Bunga2019").val(), 
+													TenagaKerja2018: $("#Pria2018").val()+'|'+$("#Perempuan2018").val(), 
+													TenagaKerja2019: $("#Pria2019").val()+'|'+$("#Perempuan2019").val(), 
+													TingkatPendidikan2018: $("#TidakSekolah2018").val()+'|'+$("#SD2018").val()+'|'+$("#SMP2018").val()+'|'+$("#SMA2018").val()+'|'+$("#Kuliah2018").val(), 
+													TingkatPendidikan2019: $("#TidakSekolah2019").val()+'|'+$("#SD2019").val()+'|'+$("#SMP2019").val()+'|'+$("#SMA2019").val()+'|'+$("#Kuliah2019").val(), 
+													Aset2018: $("#Tanah2018").val()+'|'+$("#Gedung2018").val()+'|'+$("#Peralatan2018").val()+'|'+$("#Mobil2018").val(), 
+													Aset2019: $("#Tanah2019").val()+'|'+$("#Gedung2019").val()+'|'+$("#Peralatan2019").val()+'|'+$("#Mobil2019").val(), 
+													DampakPandemi: $("#DampakCovid").val(), 
+													PersentaseDampakPandemi: DampakCovid, 
+													OptimismeUsaha: $("#Optimisme").val(), 
+													DaerahPemasaran: $("#DaerahPemasaran").val(), 
+													MediaPromosi: MediaPromosi, 
+													HKI: $("#HKI").val(), 
+													BadanHukum: $("#BadanHukum").val(), 
+													JenisBadanHukum: BadanHukum
+												}
+					$.post(BaseURL+"Ekraf/Survei", Survei).done(function(Respon) {
+						if (Respon == '1') {
+							alert('Data Survei Berhasil Disimpan!')
+							// window.location = BaseURL + "Ekraf"
+						}
+						else {
+							alert('Respon')
+						}
+					})
+        })
+
+				$("#MediaPromosi").change(function (){
+          if ($("#MediaPromosi").val() == 9) {
+						$("#MediaPromosiLainnya").prop('disabled', false);
+						$("#MediaPromosiLainnya").attr("placeholder", "Sebutkan");
+					} else {
+						$("#MediaPromosiLainnya").prop('disabled', true);
+						$("#MediaPromosiLainnya").attr("placeholder", "");
+					}
+        })
+
+				$("#JenisBadanHukum").change(function (){
+          if ($("#JenisBadanHukum").val() == 6) {
+						$("#BadanHukumLainnya").prop('disabled', false);
+						$("#BadanHukumLainnya").attr("placeholder", "Sebutkan");
+					} else {
+						$("#BadanHukumLainnya").prop('disabled', true);
+						$("#BadanHukumLainnya").attr("placeholder", "");
+					}
+        })
+
+				$("#DampakCovid").change(function (){
+          if ($("#DampakCovid").val() == 3) {
+						$("#PersentaseDampakCovid").prop('disabled', true);
+					} else {
+						$("#PersentaseDampakCovid").prop('disabled', false);
+					}
+        })
 
         $("#Provinsi").change(function (){
           var Provinsi = { Kode: $("#Provinsi").val() }
